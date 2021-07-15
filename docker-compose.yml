@@ -12,10 +12,6 @@ services:
 #      - django-net
 #    environment:
 #      - importer_id=5e4428760f24b231df5eef20
-#      - AWS_ACCESS_KEY_ID=AKIA2OCLDIYH2GTJ72YK
-#      - AWS_SECRET_ACCESS_KEY=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
-#      - AWS_DEFAULT_REGION=us-east-1
-#      - AWS_CONFIG_BUCKET=cc.devstage.marketplace.env-config
 #      - MONGODB_HOST=192.168.31.201
 #      - MONGODB_PORT=27017
 #      - MONGODB_USERNAME=user
