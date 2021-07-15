@@ -1,3 +1,16 @@
+# My added
+.DS_Store
+.env
+.mongodata/
+ScrapedData/
+CampusData/
+venv/
+.venv/
+.Python
+.idea
+log
+.aws.env
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

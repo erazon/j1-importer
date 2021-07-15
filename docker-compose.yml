@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+#  importer:
+#    user: root
+#    build:
+#      context: .
+#      dockerfile: Dockerfile.jenkins
+#    depends_on:
+#      - mongodb
+#    networks:
+#      - django-net
+#    environment:
+#      - importer_id=5e4428760f24b231df5eef20
+#      - AWS_ACCESS_KEY_ID=AKIA2OCLDIYH2GTJ72YK
+#      - AWS_SECRET_ACCESS_KEY=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
+#      - AWS_DEFAULT_REGION=us-east-1
+#      - AWS_CONFIG_BUCKET=cc.devstage.marketplace.env-config
+#      - MONGODB_HOST=192.168.31.201
+#      - MONGODB_PORT=27017
+#      - MONGODB_USERNAME=user
+#      - MONGODB_PASSWORD=password123
+#      - MONGODB_ROOT_PASSWORD=password123
+#      - MONGODB_DATABASE=mongorun
+#      - MONGODB_AUTH_DATABASE=mongorun
+
+  mongodb:
+    user: root
+    image: 'bitnami/mongodb:latest'
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./.mongodata:/bitnami
+    networks:
+      - django-net
+    environment:
+      - MONGODB_HOST=localhost
+      - MONGODB_PORT=27017
+      - MONGODB_USERNAME=user
+      - MONGODB_PASSWORD=password123
+      - MONGODB_ROOT_PASSWORD=password123
+      - MONGODB_DATABASE=mongorun
+      - MONGODB_AUTH_DATABASE=mongorun
+    restart: 'no'
+
+networks:
+  django-net:
+    driver: bridge
